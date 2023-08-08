@@ -10,3 +10,13 @@
     3. 매칭되는 큰이미지의 정보를 가져온다.
     4. 가져온 큰이미지의 정보를 section>img의 src 속성값으로 넣어준다.
 */
+
+$(document).ready(function () {
+	$('ul>li>a').on('click', function (evt) {
+		evt.preventDefault();
+		const imgSrc = $(this).attr('href');
+		$('section>img').attr({
+			src: imgSrc,
+		});
+	});
+});
